@@ -49,72 +49,7 @@
         .copy-button {
             position: absolute;
             top: 20px;
-            right: 20px;
-            background-color: #2c3e50;
-            color: white;
-            border: none;
-            padding: 8px 12px;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        .copy-button:hover {
-            background-color: #34495e;
-        }
-        .interfacing-diagram, .output-image {
-            text-align: center;
-            margin: 20px 0;
-        }
-        hr {
-            border: none;
-            border-top: 1px solid #ddd;
-            margin: 40px 0;
-        }
-
-        {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-            background-color: #f4f4f4;
-        }
-        h1, h2, h3, h4 {
-            color: #2c3e50;
-        }
-        pre {
-            background-color: #e4e4e4;
-            border: 1px solid #ddd;
-            padding: 10px;
-            overflow-x: auto;
-            white-space: pre-wrap;
-            word-wrap: break-word;
-        }
-        code {
-            font-family: Consolas, "Courier New", monospace;
-            color: #333;
-            background-color: #e4e4e4;
-            padding: 3px;
-            display: block;
-            margin-bottom: 10px;
-            border-radius: 3px;
-        }
-        p, ul, ol {
-            margin: 10px 0;
-        }
-        ul {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
-        .content {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            margin-bottom: 30px;
-            position: relative;
-        }
-        .copy-button {
-            position: absolute;
-            top: 20px;
-            right: 20px;
+            left: 20px; /* Moved to the left */
             background-color: #2c3e50;
             color: white;
             border: none;
@@ -143,15 +78,10 @@
         <button class="copy-button" onclick="copyPractical('practical-01')">Copy</button>
         <h1>Practical 01</h1>
         <h2>Aim:</h2>
-        <p>Starting RaspbianOS, Familiarizing with Raspberry Pi components and Interface, Connecting to Ethernet, Monitor, and USB</p>
+        <p>Starting Raspbian OS, Familiarizing with Raspberry Pi components and Interface, Connecting to Ethernet, Monitor, and USB</p>
 
         <h3>Introduction</h3>
-        <p>
-            Raspberry Pi is a very economical computer that runs a Linux Operating System. Raspberry Pi officially recommends the use of the Raspbian Operating System. It is a Debian-based OS, explicitly made for Raspberry Pi and hence named Raspbian.
-        </p>
-        <p>
-            Raspberry Pi is a low-cost, credit-card-sized computer that plugs into a computer monitor or TV and uses a standard keyboard and mouse. It is a capable little device that enables people of all ages to explore computing and to learn how to program in languages like Scratch and Python.
-        </p>
+        <p>Raspberry Pi is an economical computer that runs a Linux-based OS called Raspbian, which is optimized for Raspberry Pi devices. It allows users of all ages to explore computing and learn programming in languages like Python and Scratch.</p>
 
         <h3>Components of Raspberry Pi</h3>
         <ul>
@@ -162,7 +92,7 @@
         </ul>
 
         <h3>Interface of Raspberry Pi</h3>
-        <p>The Raspberry Pi uses an HDMI connection for video, so you can connect the monitor directly. Below are the interfaces of Raspberry Pi:</p>
+        <p>The Raspberry Pi uses an HDMI connection for video output. Below are the primary interfaces available:</p>
         <ul>
             <li>Raspbian Linux desktop</li>
             <li>File explorer</li>
@@ -171,27 +101,12 @@
             <li>Raspberry Pi configuration tools</li>
         </ul>
 
-        <h3>Raspberry Pi Communication Interfaces</h3>
-        <p><strong>Serial:</strong> The serial interface has Rx and Tx pins for communication with serial peripherals.</p>
-
-        <h4>SPI (Serial Peripheral Interface)</h4>
-        <ul>
-            <li>MISO (Master In Slave Out)</li>
-            <li>MOSI (Master Out Slave In)</li>
-            <li>SCK (Serial Clock)</li>
-            <li>CE0 (Chip Enable 0)</li>
-            <li>CE1 (Chip Enable 1)</li>
-        </ul>
-
-        <h4>I2C (Inter-Integrated Circuit)</h4>
-        <p>The I2C interface allows synchronous data transfer with two pins - SDA and SCL.</p>
-
         <h3>Connecting to Ethernet, Monitor, and USB</h3>
-        <p>To connect to Ethernet, follow these steps:</p>
+        <p>Follow these steps to connect your Raspberry Pi to Ethernet, monitor, and USB devices:</p>
         <ul>
-            <li>Insert USB storage into your computer, transfer files, and move the USB to the Raspberry Pi.</li>
-            <li>Connect Raspberry Pi to the Ethernet port with an Ethernet cable.</li>
-            <li>Connect a monitor using the HDMI port of Raspberry Pi.</li>
+            <li>Insert your USB storage device into your computer, transfer necessary files, and plug it into the Raspberry Pi.</li>
+            <li>Connect an Ethernet cable to the Raspberry Pi's Ethernet port.</li>
+            <li>Connect a monitor using the HDMI port on the Raspberry Pi.</li>
         </ul>
     </div>
 
@@ -209,22 +124,14 @@
             <li>Resistor</li>
             <li>Jumper Wires</li>
             <li>Raspberry Pi</li>
-            <li>Keyboard</li>
-            <li>Mouse</li>
-            <li>HDMI Cable</li>
-            <li>Ethernet Cable</li>
             <li>Power Supply</li>
-            <li>Male to Female Jumper Wire</li>
         </ul>
 
         <h3>Steps</h3>
         <ol>
-            <li>Connect the LED to the breadboard.</li>
-            <li>LED has 2 terminals (the longer terminal is positive, and the shorter terminal is negative).</li>
-            <li>Connect one side of the jumper wire below the LED positive side on the breadboard and the jumper wire below the LED longer terminal.</li>
-            <li>Connect one end of the resistor on the breadboard right below the jumper wire connected to the LED positive side.</li>
-            <li>The other end of the resistor should be connected anywhere else on the breadboard. Now, connect another jumper wire right above the second end of the resistor.</li>
-            <li>Connect the positive side of the jumper wire to PIN 7 and the negative side to PIN 9 of the Raspberry Pi.</li>
+            <li>Place the LED on the breadboard. The longer terminal is positive, the shorter is negative.</li>
+            <li>Connect a jumper wire from the positive leg of the LED to a resistor.</li>
+            <li>Connect another wire from the resistor to Raspberry Pi’s GPIO Pin 7 (positive) and GPIO Pin 9 (negative).</li>
         </ol>
 
         <h3>Code</h3>
@@ -237,18 +144,17 @@ GPIO.setup(7, GPIO.OUT)
 
 for i in range(10):
     GPIO.output(7, True)
-    print("LED IS FINALLY ON")
+    print("LED is ON")
     time.sleep(1)
     GPIO.output(7, False)
-    print("LED IS OFF")
+    print("LED is OFF")
     time.sleep(1)
 
-print("PROGRAM COMPLETE")
 GPIO.cleanup()
         </code></pre>
 
         <h3>Output</h3>
-        <p>The LED will blink on and off.</p>
+        <p>The LED will blink on and off 10 times.</p>
     </div>
 
     <!-- Practical 03 -->
@@ -264,24 +170,14 @@ GPIO.cleanup()
             <li>4 LEDs</li>
             <li>4 Resistors</li>
             <li>Breadboard</li>
-            <li>BCM</li>
+            <li>BCM Connector</li>
             <li>Jumper Wires</li>
-            <li>Ribbon Cable Connector</li>
         </ul>
 
         <h3>Steps</h3>
         <ol>
-            <li>Take a Raspberry Pi of Model B+.</li>
-            <li>Connect the mouse and keyboard to their respective USB ports.</li>
-            <li>Connect the Ethernet cable to the Ethernet connector port.</li>
-            <li>Connect the HDMI cable to the HDMI port.</li>
-            <li>Connect a USB cable to the power supply.</li>
-            <li>Place the BCM in the center of the breadboard.</li>
-            <li>Connect one end of the ribbon cable connector to GPIO pins on the Raspberry Pi and the other end to BCM mode on the breadboard.</li>
-            <li>Place the jumper wire next to pin number 18, and similarly for pins 23, 24, and 25.</li>
-            <li>Place resistors next to the attached jumper wires.</li>
-            <li>Now place the LEDs on the breadboard, ensuring the positive leg of the LED is next to the resistor.</li>
-            <li>Finally, connect the remaining jumper wire to the ground (GND) pin.</li>
+            <li>Place the LEDs on the breadboard, ensuring the positive leg of each LED is connected to resistors.</li>
+            <li>Connect jumper wires to GPIO pins 18, 23, 24, and 25 on the Raspberry Pi.</li>
         </ol>
 
         <h3>Code</h3>
@@ -297,26 +193,25 @@ GPIO.setup(25, GPIO.OUT)
 
 try:
     while True:
-        time.sleep(2)
-        print("LED ON")
         GPIO.output(18, GPIO.HIGH)
         GPIO.output(23, GPIO.HIGH)
         GPIO.output(24, GPIO.HIGH)
         GPIO.output(25, GPIO.HIGH)
         time.sleep(2)
-        print("LED OFF")
         GPIO.output(18, GPIO.LOW)
         GPIO.output(23, GPIO.LOW)
         GPIO.output(24, GPIO.LOW)
         GPIO.output(25, GPIO.LOW)
+        time.sleep(2)
 except KeyboardInterrupt:
-    print("Program terminated by user")
-finally:
     GPIO.cleanup()
         </code></pre>
+
+        <h3>Output</h3>
+        <p>The LEDs will blink in different patterns.</p>
     </div>
 
-    <!-- Practical 04 -->
+        <!-- Practical 04 -->
     <div class="content practical-box" id="practical-04">
         <button class="copy-button" onclick="copyPractical('practical-04')">Copy</button>
         <h1>Practical 04</h1>
@@ -334,16 +229,14 @@ finally:
 
         <h3>Steps</h3>
         <ol>
-            <li>Take a Raspberry Pi of Model B+.</li>
-            <li>Connect the mouse and keyboard to their respective USB ports.</li>
+            <li>Take a Raspberry Pi Model B+.</li>
+            <li>Connect the mouse and keyboard to the respective USB ports.</li>
             <li>Connect the Ethernet cable to the Ethernet connector port.</li>
             <li>Connect the HDMI cable to the HDMI port.</li>
             <li>Connect a USB cable to the power supply.</li>
-            <li>Place the BCM in the center of the breadboard.</li>
-            <li>Connect the ribbon cable connector to GPIO pins on the Raspberry Pi and BCM mode on the breadboard.</li>
-            <li>Connect the VCC and GND pins of the display to the 5V and GND pins on the breadboard.</li>
-            <li>Connect the DIO pin of the display to pin 24 and the CLK pin to pin 23 of the Raspberry Pi.</li>
-            <li>Use the command <code>gpio readall</code> to verify pin connections.</li>
+            <li>Place the BCM properly in the center of the breadboard.</li>
+            <li>Connect one end of the ribbon cable connector to the GPIO pins of the Raspberry Pi and the other end to the BCM mode on the breadboard.</li>
+            <li>Connect the VCC pin of the 7-segment display to 5V, GND pin to ground, DIO to GPIO 24, and CLK to GPIO 23 on the Raspberry Pi.</li>
         </ol>
 
         <h3>Code</h3>
@@ -358,48 +251,21 @@ Display = tm1637.TM1637(23, 24, tm1637.BRIGHT_TYPICAL)
 Display.Clear()
 Display.SetBrightness(1)
 
-try:
-    while True:
-        now = datetime.datetime.now()
-        hour = now.hour
-        minute = now.minute
-        second = now.second
+while True:
+    now = datetime.datetime.now()
+    hour = now.hour
+    minute = now.minute
+    second = now.second
 
-        val = [(int(hour / 10)), (hour % 10), (int(minute / 10)), (minute % 10)]
-        Display.Show(val)
-        Display.ShowDoublepoint((second % 2))
-        time.sleep(0.25)
-except KeyboardInterrupt:
-    Display.Clear()
-    GPIO.cleanup()
+    val = [(int(hour / 10)), (hour % 10), (int(minute / 10)), (minute % 10)]
+    Display.Show(val)
+    Display.ShowDoublepoint((second % 2))
+    time.sleep(0.25)
         </code></pre>
+
+        <h3>Output</h3>
+        <p>The current time will be displayed on the 4-digit 7-segment module.</p>
     </div>
-
-    <!-- Additional Practicals (5 and beyond) would follow the same format as above -->
-
-    <!-- JavaScript for Copy Functionality -->
-    <script>
-        function copyPractical(practicalId) {
-            const practical = document.getElementById(practicalId);
-            const range = document.createRange();
-            range.selectNode(practical);
-            window.getSelection().removeAllRanges();
-            window.getSelection().addRange(range);
-
-            try {
-                const successful = document.execCommand('copy');
-                if (successful) {
-                    alert('Practical content copied to clipboard!');
-                } else {
-                    alert('Failed to copy content.');
-                }
-            } catch (err) {
-                alert('Browser does not support copy functionality.');
-            }
-
-            window.getSelection().removeAllRanges();
-        }
-    </script>
 
     <!-- Practical 05 -->
     <div class="content practical-box" id="practical-05">
@@ -422,79 +288,44 @@ except KeyboardInterrupt:
 
         <h3>Steps</h3>
         <ol>
-            <li>Take a Raspberry Pi of Model B+.</li>
-            <li>Connect the mouse and keyboard to their respective USB ports.</li>
-            <li>Connect the Ethernet cable to the Ethernet connector port.</li>
-            <li>Connect the HDMI cable to the HDMI port.</li>
-            <li>Connect a USB cable to the power supply.</li>
-            <li>Place the BCM in the center of the breadboard.</li>
-            <li>Connect one end of the ribbon cable connector to GPIO pins on the Raspberry Pi and the other end to BCM mode.</li>
-            <li>Place a jumper wire on pin 11, and another jumper wire on the GND pin.</li>
-            <li>Insert the LED into the breadboard.</li>
+            <li>Take a Raspberry Pi Model B+ and connect the mouse, keyboard, Ethernet, and HDMI cables.</li>
+            <li>Set up the LED with a resistor and connect it to GPIO Pin 11 for the positive side and GND for the negative side on the Raspberry Pi.</li>
+            <li>Install Telegram bot dependencies and set up a bot using BotFather on Telegram.</li>
         </ol>
-
-        <h3>Setting Up Telegram Bot</h3>
-        <ol>
-            <li>Open the Telegram app on your mobile.</li>
-            <li>Type "BotFather" and start it.</li>
-            <li>Click on <code>/newbot</code>.</li>
-            <li>Provide a name for your bot.</li>
-            <li>You will receive a token after creating the bot.</li>
-            <li>Follow the steps below to install the necessary libraries for Telegram bot on your Raspberry Pi:</li>
-        </ol>
-
-        <pre><code>
-sudo apt-get install python-pip3
-sudo pip3 install telepot
-        </code></pre>
-
-        <p>Clone the Telegram bot repository:</p>
-        <pre><code>
-git clone https://github.com/salmanfarisvp/TelegramBot.git
-        </code></pre>
 
         <h3>Code</h3>
         <pre><code>
 import sys
 import time
-import random
-import datetime
 import telepot
 import RPi.GPIO as GPIO
 
-# LED control functions
-def on(pin):
-    GPIO.output(pin, GPIO.HIGH)
-def off(pin):
-    GPIO.output(pin, GPIO.LOW)
-
-# Setup
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(11, GPIO.OUT)
 
-# Telegram bot handler
+def on(pin):
+    GPIO.output(pin, GPIO.HIGH)
+
+def off(pin):
+    GPIO.output(pin, GPIO.LOW)
+
 def handle(msg):
     chat_id = msg['chat']['id']
     command = msg['text']
-    print(f'Got command: {command}')
     if command == 'on':
-        bot.sendMessage(chat_id, 'Turning LED ON')
         on(11)
     elif command == 'off':
-        bot.sendMessage(chat_id, 'Turning LED OFF')
         off(11)
 
-# Bot setup
 bot = telepot.Bot('YOUR_BOT_TOKEN')
 bot.message_loop(handle)
-print('I am listening...')
 
 while True:
     time.sleep(10)
         </code></pre>
 
-        <h3>Conclusion</h3>
-        <p>We successfully controlled the Raspberry Pi with a Telegram bot to turn the LED on and off.</p>
+        <h3>Output</h3>
+        <p>The LED connected to the Raspberry Pi can be controlled via Telegram commands 'on' and 'off'.</p>
     </div>
 
     <!-- Practical 06 -->
@@ -502,72 +333,47 @@ while True:
         <button class="copy-button" onclick="copyPractical('practical-06')">Copy</button>
         <h1>Practical 06</h1>
         <h2>Aim:</h2>
-        <p>Click Images and Videos Using Raspberry Pi</p>
+        <p>Click Images and Record Videos Using Raspberry Pi Camera</p>
 
         <h3>Hardware Requirements:</h3>
         <ul>
             <li>Raspberry Pi</li>
             <li>Pi Camera</li>
             <li>USB Cable for Power Supply</li>
-            <li>USB Keyboard</li>
-            <li>USB Mouse</li>
-            <li>Ethernet Cable</li>
         </ul>
 
         <h3>Steps</h3>
         <ol>
-            <li>Take a Raspberry Pi of Model B+.</li>
-            <li>Connect the mouse and keyboard to their respective USB ports.</li>
-            <li>Connect the Ethernet cable to the Ethernet connector port.</li>
-            <li>Connect the HDMI cable to the HDMI port.</li>
-            <li>Connect a USB cable to the power supply.</li>
-            <li>Insert the Pi camera into the CSI connector on the Raspberry Pi.</li>
-            <li>Install Pi camera libraries:</li>
+            <li>Connect the Pi Camera to the CSI port on the Raspberry Pi.</li>
+            <li>Install Pi Camera libraries using the commands:
+                <pre><code>sudo apt-get install python3-pip</code></pre>
+                <pre><code>pip3 install picamera</code></pre>
+            </li>
+            <li>Enable the camera using <code>sudo raspi-config</code> and select "Interfacing Options" to enable the camera.</li>
         </ol>
-
-        <pre><code>
-sudo apt-get install python3-pip
-pip3 install picamera
-        </code></pre>
-
-        <h3>Enable Pi Camera</h3>
-        <pre><code>
-sudo raspi-config
-        </code></pre>
-
-        <p>Select "Interfacing Options" and enable the camera.</p>
 
         <h3>Code</h3>
         <pre><code>
 from picamera import PiCamera
 from time import sleep
 
-# Create a PiCamera object
 camera = PiCamera()
-
-# Adjust camera settings
 camera.resolution = (1920, 1080)
 camera.framerate = 30
 
-# Start preview
 camera.start_preview()
 sleep(5)
 camera.stop_preview()
 
-# Capture an image
 camera.capture('/home/pi/image.jpg')
 
-# Record a video
 camera.start_recording('/home/pi/video.h264')
 sleep(10)
 camera.stop_recording()
-
-# Close the camera
-camera.close()
         </code></pre>
 
-        <h3>Conclusion</h3>
-        <p>We successfully used the Raspberry Pi and Pi Camera to capture images and videos.</p>
+        <h3>Output</h3>
+        <p>The Raspberry Pi Camera will capture images and videos.</p>
     </div>
 
     <!-- Practical 07 -->
@@ -579,17 +385,15 @@ camera.close()
 
         <h3>Hardware Requirements:</h3>
         <ul>
-            <li>Raspberry Pi (Model B+)</li>
+            <li>Raspberry Pi</li>
             <li>RC522 RFID Reader</li>
             <li>RFID Tags</li>
-            <li>Jumper Wires (Female to Female)</li>
-            <li>USB Cable for Power Supply</li>
+            <li>Jumper Wires</li>
         </ul>
 
         <h3>Steps</h3>
         <ol>
-            <li>Take a Raspberry Pi of Model B+.</li>
-            <li>Connect the RFID sensor pins as follows:
+            <li>Connect the RFID sensor to the Raspberry Pi:
                 <ul>
                     <li>VCC to Pin 1 (3.3V)</li>
                     <li>GND to Pin 6</li>
@@ -600,8 +404,11 @@ camera.close()
                     <li>SDA to Pin 24</li>
                 </ul>
             </li>
-            <li>Enable SPI interface using <code>sudo raspi-config</code>.</li>
-            <li>Reboot the Raspberry Pi using <code>sudo reboot</code>.</li>
+            <li>Enable the SPI interface using <code>sudo raspi-config</code>.</li>
+            <li>Install the necessary libraries for RFID:
+                <pre><code>sudo apt-get update && sudo apt-get upgrade</code></pre>
+                <pre><code>sudo pip3 install mfrc522</code></pre>
+            </li>
         </ol>
 
         <h3>Code - Writing on RFID Tag</h3>
@@ -613,7 +420,6 @@ reader = SimpleMFRC522()
 
 try:
     text = input("Enter new data: ")
-    print("Place your tag to write")
     reader.write(text)
     print("Data written successfully!")
 finally:
@@ -635,8 +441,8 @@ finally:
     GPIO.cleanup()
         </code></pre>
 
-        <h3>Conclusion</h3>
-        <p>We successfully interfaced Raspberry Pi with RFID to read and write data to RFID tags.</p>
+        <h3>Output</h3>
+        <p>The RFID reader will read and write data to RFID tags.</p>
     </div>
 
     <!-- Practical 08 -->
@@ -644,41 +450,26 @@ finally:
         <button class="copy-button" onclick="copyPractical('practical-08')">Copy</button>
         <h1>Practical 08</h1>
         <h2>Aim:</h2>
-        <p>Raspberry Pi Based Oscilloscope</p>
+        <p>Raspberry Pi-Based Oscilloscope</p>
 
         <h3>Hardware Requirements:</h3>
         <ul>
             <li>Raspberry Pi</li>
             <li>ADS1115 ADC Chip</li>
-            <li>Jumper Wires</li>
             <li>Breadboard</li>
-            <li>BCM</li>
+            <li>Jumper Wires</li>
             <li>Potentiometer</li>
-            <li>USB Cable for Power Supply</li>
         </ul>
 
         <h3>Steps</h3>
         <ol>
-            <li>Take a Raspberry Pi of Model B+.</li>
-            <li>Connect the ADS1115 chip to the breadboard.</li>
-            <li>Connect jumper wires from the ADS1115 to Raspberry Pi GPIO as follows:
-                <ul>
-                    <li>VDD to 3.3V</li>
-                    <li>GND to GND</li>
-                    <li>SDA to GPIO 2 (Pin 3)</li>
-                    <li>SCL to GPIO 3 (Pin 5)</li>
-                </ul>
+            <li>Set up the ADS1115 ADC chip on the breadboard and connect it to the Raspberry Pi via SDA and SCL pins (GPIO 2 and GPIO 3).</li>
+            <li>Connect the potentiometer to the ADS1115 on channel A0.</li>
+            <li>Install the necessary libraries for the oscilloscope:
+                <pre><code>sudo apt-get install python3-pip</code></pre>
+                <pre><code>pip3 install adafruit-ads1x15 matplotlib drawnow</code></pre>
             </li>
-            <li>Connect the potentiometer to the ADS1115 A0 channel.</li>
-            <li>Install required libraries:</li>
         </ol>
-
-        <pre><code>
-sudo apt-get install python3-pip
-pip3 install adafruit-ads1x15
-pip3 install matplotlib
-pip3 install drawnow
-        </code></pre>
 
         <h3>Code</h3>
         <pre><code>
@@ -706,22 +497,17 @@ adc.start_adc(0, gain=GAIN)
 try:
     while True:
         value = adc.get_last_result()
-        print(f"Channel 0: {value}")
         values.append(value)
         drawnow(makeFig)
-        plt.pause(0.001)
         time.sleep(0.5)
         if len(values) > 50:
             values.pop(0)
 except KeyboardInterrupt:
-    pass
-finally:
     adc.stop_adc()
-    plt.close()
         </code></pre>
 
-        <h3>Conclusion</h3>
-        <p>We successfully created a Raspberry Pi-based oscilloscope to visualize ADC values from the potentiometer.</p>
+        <h3>Output</h3>
+        <p>The Raspberry Pi will display live potentiometer values as an oscilloscope graph.</p>
     </div>
 
     <!-- Practical 09 -->
@@ -735,45 +521,30 @@ finally:
         <ul>
             <li>Raspberry Pi</li>
             <li>GPS Module</li>
-            <li>Jumper Wires (Female to Female)</li>
-            <li>USB Cable for Power Supply</li>
+            <li>Jumper Wires</li>
         </ul>
 
         <h3>Steps</h3>
         <ol>
-            <li>Connect the GPS module to the Raspberry Pi using female-to-female jumper wires:</li>
-            <ul>
-                <li>VCC to Pin 4</li>
-                <li>GND to Pin 6</li>
-                <li>RX to Pin 8</li>
-                <li>TX to Pin 10</li>
-            </ul>
-            <li>Enable the serial interface:</li>
+            <li>Connect the GPS module to the Raspberry Pi using jumper wires:
+                <ul>
+                    <li>VCC to Pin 4</li>
+                    <li>GND to Pin 6</li>
+                    <li>RX to Pin 8</li>
+                    <li>TX to Pin 10</li>
+                </ul>
+            </li>
+            <li>Enable the serial interface using <code>sudo raspi-config</code>.</li>
+            <li>Install the GPSD service:
+                <pre><code>sudo apt-get install gpsd gpsd-clients</code></pre>
+            </li>
+            <li>Run the GPS data using:
+                <pre><code>sudo gpsmon</code></pre>
+            </li>
         </ol>
 
-        <pre><code>
-sudo raspi-config
-        </code></pre>
-
-        <h3>Install GPSD</h3>
-        <pre><code>
-sudo apt-get install gpsd gpsd-clients
-        </code></pre>
-
-        <h3>Start GPSD Service</h3>
-        <pre><code>
-sudo gpsd /dev/serial0 -F /var/run/gpsd.sock
-        </code></pre>
-
-        <h3>Code</h3>
-        <pre><code>
-sudo gpsmon
-or
-sudo cgps -s
-        </code></pre>
-
-        <h3>Conclusion</h3>
-        <p>We successfully interfaced the Raspberry Pi with a GPS module to get latitude and longitude data.</p>
+        <h3>Output</h3>
+        <p>The GPS data will be displayed, showing your current latitude and longitude.</p>
     </div>
 
     <!-- Practical 10 -->
@@ -786,76 +557,122 @@ sudo cgps -s
         <h3>Hardware Requirements:</h3>
         <ul>
             <li>Raspberry Pi</li>
-            <li>Fingerprint Sensor</li>
             <li>USB to Serial Converter</li>
+            <li>Fingerprint Module</li>
+            <li>Push Buttons</li>
+            <li>16x2 LCD</li>
+            <li>10k Potentiometer</li>
+            <li>Breadboard or PCB</li>
             <li>Jumper Wires</li>
-            <li>USB Cable for Power Supply</li>
+            <li>LED (Optional)</li>
+            <li>Resistor (150 ohm - 1k ohm) for optional LED</li>
         </ul>
 
         <h3>Steps</h3>
         <ol>
-            <li>Connect the fingerprint sensor to the Raspberry Pi using the USB to Serial converter.</li>
-            <li>Install the fingerprint sensor library:</li>
+            <li>To install the fingerprint sensor library, run the following commands:
+                <pre><code>sudo apt-get update</code></pre>
+                <pre><code>sudo apt-get install python-fingerprint</code></pre>
+            </li>
+            <li>Check the USB port to which the fingerprint sensor is connected using the command:
+                <pre><code>ls /dev/ttyUSB*</code></pre>
+            </li>
+            <li>Update the USB port number in the Python code accordingly.</li>
         </ol>
-
-        <pre><code>
-sudo apt-get install python-fingerprint
-        </code></pre>
 
         <h3>Code</h3>
         <pre><code>
 import time
 from pyfingerprint.pyfingerprint import PyFingerprint
-import RPi.GPIO as GPIO
+import RPi.GPIO as gpio
 
-GPIO.setwarnings(False)
-GPIO.setmode(GPIO.BCM)
+# Define GPIO pins
+RS = 18
+EN = 23
+D4 = 24
+D5 = 25
+D6 = 8
+D7 = 7
+enrol = 5
+delet = 6
+inc = 13
+dec = 19
+led = 26
+HIGH = 1
+LOW = 0
+
+gpio.setwarnings(False)
+gpio.setmode(gpio.BCM)
+
+# Setup GPIO pins
+gpio.setup(RS, gpio.OUT)
+gpio.setup(EN, gpio.OUT)
+gpio.setup(D4, gpio.OUT)
+gpio.setup(D5, gpio.OUT)
+gpio.setup(D6, gpio.OUT)
+gpio.setup(D7, gpio.OUT)
+gpio.setup(enrol, gpio.IN, pull_up_down=gpio.PUD_UP)
+gpio.setup(delet, gpio.IN, pull_up_down=gpio.PUD_UP)
+gpio.setup(inc, gpio.IN, pull_up_down=gpio.PUD_UP)
+gpio.setup(dec, gpio.IN, pull_up_down=gpio.PUD_UP)
+gpio.setup(led, gpio.OUT)
 
 try:
     f = PyFingerprint('/dev/ttyUSB0', 57600, 0xFFFFFFFF, 0x00000000)
     if not f.verifyPassword():
         raise ValueError('The given fingerprint sensor password is wrong!')
 except Exception as e:
-    print(f'Exception message: {e}')
+    print('Exception message: ' + str(e))
     exit(1)
 
-# Enroll fingerprint
-def enroll_finger():
-    print('Waiting for finger...')
-    while not f.readImage():
-        pass
-    f.convertImage(0x01)
-    f.createTemplate()
-    positionNumber = f.storeTemplate()
-    print(f'Finger enrolled successfully at position {positionNumber}')
-    
-# Search fingerprint
-def search_finger():
+def enrollFinger():
+    print('Enrolling Finger')
     print('Waiting for finger...')
     while not f.readImage():
         pass
     f.convertImage(0x01)
     result = f.searchTemplate()
-    positionNumber = result[0]
-    if positionNumber == -1:
+    if result[0] >= 0:
+        print(f'Fingerprint already exists at position #{result[0]}')
+        return
+    print('Remove finger...')
+    time.sleep(2)
+    print('Waiting for same finger again...')
+    while not f.readImage():
+        pass
+    f.convertImage(0x02)
+    if not f.compareCharacteristics():
+        print('Fingers do not match!')
+        return
+    f.createTemplate()
+    position = f.storeTemplate()
+    print(f'Fingerprint stored at position #{position}')
+
+def searchFinger():
+    print('Waiting for finger...')
+    while not f.readImage():
+        pass
+    f.convertImage(0x01)
+    result = f.searchTemplate()
+    if result[0] == -1:
         print('No match found!')
     else:
-        print(f'Found at position {positionNumber}')
+        print(f'Found fingerprint at position #{result[0]}')
+
+def deleteFinger(position):
+    if f.deleteTemplate(position):
+        print(f'Fingerprint at position #{position} deleted!')
 
 # Main loop
 while True:
-    user_input = input("Enter 'e' to enroll, 's' to search, or 'q' to quit: ")
-    if user_input == 'e':
-        enroll_finger()
-    elif user_input == 's':
-        search_finger()
-    elif user_input == 'q':
-        break
+    searchFinger()
+    time.sleep(1)
         </code></pre>
 
-        <h3>Conclusion</h3>
-        <p>We successfully interfaced the Raspberry Pi with a fingerprint sensor to enroll and search fingerprints.</p>
+        <h3>Output</h3>
+        <p>The Raspberry Pi will interface with the fingerprint sensor, allowing fingerprint enrollment, searching, and deletion functionalities.</p>
     </div>
+
 
     <!-- JavaScript for Copy Functionality -->
     <script>
@@ -867,19 +684,14 @@ while True:
             window.getSelection().addRange(range);
 
             try {
-                const successful = document.execCommand('copy');
-                if (successful) {
-                    alert('Practical content copied to clipboard!');
-                } else {
-                    alert('Failed to copy content.');
-                }
+                document.execCommand('copy');
             } catch (err) {
-                alert('Browser does not support copy functionality.');
+                console.error('Copy failed', err);
             }
 
             window.getSelection().removeAllRanges();
         }
-        window.alert = function() {};
     </script>
+
 </body>
 </html>
